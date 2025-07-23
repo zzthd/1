@@ -14,14 +14,14 @@ let currentFrame = 0;
 let lastFrameTime = 0;
 
 // --- 动画速度控制 (数值越大，播放越慢) ---
-const introFrameSpeed = 200; // 开头动画速度
-const endFrameSpeed = 120;   // 结尾动画速度
+const introFrameSpeed = 250; // 开头动画速度
+const endFrameSpeed = 130;   // 结尾动画速度
 
 // --- 麦克风灵敏度控制 ---
-const micThreshold = 0.05;      // 判定交互开始的最低音量
+const micThreshold = 0.1;      // 判定交互开始的最低音量
 // 2. 调整了最大吹气音量。将这个值调高，意味着你需要用更大的力气才能把帘子吹到最高，
 // 从而实现了“分级”的效果，让轻吹和重吹有明显区别。你可以根据麦克风灵敏度调整这个值。
-const maxBlowVolume = 0.5;      // 吹气要达到这个音量才能把帘子吹到最高
+const maxBlowVolume = 1;      // 吹气要达到这个音量才能把帘子吹到最高
 
 function preload() {
   // 加载开头动画
