@@ -116,10 +116,9 @@ function draw() {
   }
 }
 
-// 统一的图像显示函数
-function showImage(img) {
+// 居中缩放显示图像
   if (img && img.width > 0) {
-    let scaleFactor = min(width / img.width, height / img.height);
+    let scaleFactor = min(width / img.width, height / img.height) * 0.98; // 缩放因子，留出边距
     let w = img.width * scaleFactor;
     let h = img.height * scaleFactor;
     image(img, width / 2, height / 2, w, h);
